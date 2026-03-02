@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krist • Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">Krist</div>
+  <div class="nav-right">
+    <div class="auth-area" id="authArea"></div>
+    <div class="cart-icon" id="cartToggle">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Cart (<span id="cartCountHeader">0</span>)</h3>
+    <span class="cart-close" id="cartClose">×</span>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="document.getElementById('loginModal').style.display='none'">×</span>
+    <h2 style="text-align:center; margin-bottom:1.8rem;">Sign In</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="link" id="toRegister">Create new account</div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal" id="registerModal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="document.getElementById('registerModal').style.display='none'">×</span>
+    <h2 style="text-align:center; margin-bottom:1.8rem;">Create Account</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="regName" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="regEmail" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="regPassword" required minlength="6">
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="link" id="toLogin">Already have an account? Sign in</div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Women's Collection</h1>
+    <p>SS26 Trends • Romantic & Bold • UPTO 40% OFF</p>
+    <a href="#" class="shop-btn">Shop Now</a>
+  </div>
+</section>
+
+<h2 class="section-title">Our Best Sellers</h2>
+
+<div class="products" id="productList"></div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="logo">Krist</div>
+      <div class="contact-info">
+        <p><i class="fa fa-phone"></i> 0344****167</p>
+        <p><i class="fa fa-envelope"></i> contact@ismailbaba.com</p>
+        <p><i class="fa fa-location-dot"></i> Academy Town Canal Road Peshawer
+</p>
+      </div>
+    </div>
+    <div>
+      <h3>Account</h3>
+      <a href="#" id="myAccountLink">My Account</a>
+      <a href="#" onclick="document.getElementById('loginModal').style.display='flex'">Login</a>
+      <a href="#" id="cartLinkFooter">My Cart</a>
+      <a href="#">Wishlist</a>
+      <a href="#" id="checkoutLinkFooter">Checkout</a>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+    <div>
+      <h3>Stay Updated</h3>
+      <p>Subscribe to get first access to new drops, exclusive offers & more.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your email address">
+        <button><i class="fa fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="payments">
+      <img src="https://img.icons8.com/color/48/visa.png" alt="Visa"/>
+      <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard"/>
+      <img src="https://img.icons8.com/color/48/google-pay-india.png" alt="Google Pay"/>
+      <img src="https://img.icons8.com/color/48/amex.png" alt="Amex"/>
+      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal"/>
+    </div>
+    <p>© 2026 ismail Marwat • All Rights Reserved</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
